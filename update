@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+require 'erb'
+require 'fileutils'
+
+def build_file(version, checksum, file)
+  File.write("#{version}/#{file}", ERB.new(File.read("template/#{file}.erb")).result(binding))
+end
+
+def build_files(version, checksum)
+  FileUtils.mkdir_p(version)
+  %w(Dockerfile ruby.md5).each do |file|
+    build_file(version, checksum, file)
+  end
+end
+
+{
+  '2.2.0' => 'd03cd4690fec1fff81d096d1c1255fde',
+  '2.1.5' => 'a7c3e5fec47eff23091b566e9e1dac1b',
+  '2.0.0-p598' => 'a3f3908103a7d209d1d1cf4712e3953c',
+  '1.9.3-p551' => '0d8b272b05c3449dc848bb7570f65bfe',
+}.each do |version, checksum|
+  build_files(version, checksum)
+end
