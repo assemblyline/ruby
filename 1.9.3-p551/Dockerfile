@@ -4,7 +4,7 @@ ENV RUBY_VERSION 1.9.3-p551
 COPY ruby.md5 /usr/src/ruby/
 
 RUN apt-get update -q \
-      && apt-get install -qy bison ruby \
+      && apt-get install -qy bison ruby nodejs --no-install-recommends \
       && rm -rf /var/lib/apt/lists/* \
       && mkdir -p /usr/src/ruby \
       && curl -o /usr/src/ruby/src.tar.bz2 --create-dirs http://cache.ruby-lang.org/pub/ruby/ruby-1.9.3-p551.tar.bz2 \

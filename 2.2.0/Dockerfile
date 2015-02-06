@@ -4,7 +4,7 @@ ENV RUBY_VERSION 2.2.0
 COPY ruby.md5 /usr/src/ruby/
 
 RUN apt-get update -q \
-      && apt-get install -qy bison ruby \
+      && apt-get install -qy bison ruby nodejs --no-install-recommends \
       && rm -rf /var/lib/apt/lists/* \
       && mkdir -p /usr/src/ruby \
       && curl -o /usr/src/ruby/src.tar.bz2 --create-dirs http://cache.ruby-lang.org/pub/ruby/ruby-2.2.0.tar.bz2 \
