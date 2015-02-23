@@ -3,14 +3,16 @@ require 'erb'
 require 'fileutils'
 
 def build_file(version, checksum, file)
-  File.write("#{version}/#{file}", ERB.new(File.read("template/#{file}.erb")).result(binding))
+  File.write(file, ERB.new(File.read("template/#{file}.erb")).result(binding))
 end
 
 def build_files(version, checksum)
-  FileUtils.mkdir_p(version)
+  `git checkout #{version}`
   %w(Dockerfile ruby.md5).each do |file|
     build_file(version, checksum, file)
   end
+  `git add .`
+  `git commit -m '#{ARGV[0]}'`
 end
 
 {
