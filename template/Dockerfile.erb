@@ -1,4 +1,4 @@
-FROM assemblyline/buildpack_deps
+FROM quay.io/assemblyline/buildpack_deps:14.04.01
 
 ENV RUBY_VERSION <%= version %>
 COPY ruby.md5 /usr/src/ruby/
