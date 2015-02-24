@@ -8,6 +8,7 @@ end
 
 def build_files(version, checksum)
   `git checkout #{version}`
+  `git rebase master`
   %w(Dockerfile ruby.md5).each do |file|
     build_file(version, checksum, file)
   end
