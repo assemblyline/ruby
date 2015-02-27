@@ -8,7 +8,7 @@ end
 
 def build_files(version, checksum)
   `git checkout master`
-  `git branch -d #{version}`
+  `git branch -D #{version}`
   `git checkout -b #{version}`
   %w(Dockerfile sha256sums).each do |file|
     build_file(version, checksum, file)
