@@ -3,7 +3,7 @@
 Based on `quay.io/assemblyline/buildpack_deps`, this image should include everything needed to run a ruby appication on docker.
 
 ### Automated Build
-This image is built automaticly on docker hub. And as it is based on `quay.io/assemblyline/buildpack_deps` should automaticly get any package updates that are needed.
+This image is built automaticly on [quay.io](https://quay.io/repository/assemblyline/ruby). And as it is based on `quay.io/assemblyline/buildpack_deps` should automaticly get any package updates that are needed.
 
 ### Suported Versions
 
