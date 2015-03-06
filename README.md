@@ -7,11 +7,11 @@ This image is built automaticly on docker hub. And as it is based on `quay.io/as
 
 ### Suported Versions
 
-* Current stable - 2.2.0
-`docker pull quay.io/assemblyline/ruby:2.2.0`
+* Current stable - 2.2.1
+`docker pull quay.io/assemblyline/ruby:2.2.1`
 * Previous stable - 2.1.5
 `docker pull quay.io/assemblyline/ruby:2.1.5`
 * Old stable (2.0.0 series)
 `docker pull quay.io/assemblyline/ruby:2.0.0-p643`
 
-Other tags are avalible in the repository but are unsupported and do not recive security updates.
+Other tags are avalible in the repository but are unsupported may not recive security updates.
