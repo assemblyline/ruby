@@ -1,13 +1,13 @@
 FROM quay.io/assemblyline/buildpack_deps:14.04.2
 
-ENV RUBY_VERSION <%= version %>
+ENV RUBY_VERSION <%= data['version'] %>
 COPY sha256sums /usr/src/ruby/
 
 RUN apt-get update -q \
       && apt-get install -qy bison ruby nodejs --no-install-recommends \
       && rm -rf /var/lib/apt/lists/* \
       && mkdir -p /usr/src/ruby \
-      && curl -o /usr/src/ruby/src.tar.gz --create-dirs http://cache.ruby-lang.org/pub/ruby/ruby-<%= version %>.tar.gz \
+      && curl -o /usr/src/ruby/src.tar.gz --create-dirs http://cache.ruby-lang.org/pub/ruby/ruby-<%= data['version'] %>.tar.gz \
       && cd /usr/src/ruby \
       && sha256sum -c sha256sums \
       && tar zxf src.tar.gz --strip-components=1 \
