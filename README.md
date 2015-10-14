@@ -7,11 +7,14 @@ This image is built automaticly on [quay.io](https://quay.io/repository/assembly
 
 ### Suported Versions
 
-* Current stable - 2.2.2
-`docker pull quay.io/assemblyline/ruby:2.2.1`
-* Previous stable - 2.1.6
-`docker pull quay.io/assemblyline/ruby:2.1.5`
+* Current stable - 2.2.3
+`docker pull quay.io/assemblyline/ruby:2.2.3`
+* Previous stable - 2.1.7
+`docker pull quay.io/assemblyline/ruby:2.1.7`
 * Old stable (2.0.0 series)
-`docker pull quay.io/assemblyline/ruby:2.0.0-p645`
+`docker pull quay.io/assemblyline/ruby:2.0.0-p647`
 
-Other tags are avalible in the repository but are unsupported may not recive security updates.
+Other tags are avalible in the repository with older versions but are only 
+intended to be used as a stopgap until you can upgrade your application
+to the latest point release. These images should not be used in production
+as they contain various security issues.

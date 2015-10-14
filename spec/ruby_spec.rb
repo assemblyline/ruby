@@ -4,6 +4,10 @@ describe 'Ruby' do
   let(:ruby)     { Ruby.new(self) }
   let(:packages) { Packages.new(self) }
 
+  it 'installs version 2.2.3', :'2.2.3' do
+    expect(ruby.semvar_version).to eq '2.2.3'
+  end
+
   it 'installs version 2.2.2', :'2.2.2' do
     expect(ruby.semvar_version).to eq '2.2.2'
   end
@@ -16,12 +20,20 @@ describe 'Ruby' do
     expect(ruby.semvar_version).to eq '2.2.0'
   end
 
+  it 'installs version 2.1.7', :'2.1.7' do
+    expect(ruby.semvar_version).to eq '2.1.7'
+  end
+
   it 'installs version 2.1.6', :'2.1.6' do
     expect(ruby.semvar_version).to eq '2.1.6'
   end
 
   it 'installs version 2.1.5', :'2.1.5' do
     expect(ruby.semvar_version).to eq '2.1.5'
+  end
+
+  it 'installs version 2.0.0-p647', :'2.0.0-p647' do
+    expect(ruby.full_version).to eq '2.0.0p647'
   end
 
   it 'installs version 2.0.0-p643', :'2.0.0-p645' do
