@@ -4,6 +4,10 @@ describe 'Ruby' do
   let(:ruby)     { Ruby.new(self) }
   let(:packages) { Packages.new(self) }
 
+  it 'installs version 2.3.0-preview1', :'2.3.0-preview1' do
+    expect(ruby.semvar_version).to eq '2.3.0-preview1'
+  end
+
   it 'installs version 2.2.3', :'2.2.3' do
     expect(ruby.semvar_version).to eq '2.2.3'
   end
