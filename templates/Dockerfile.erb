@@ -16,7 +16,7 @@ RUN apt-get update -q \
       && make -j"$(nproc)" \
       && make install \
       && apt-get purge -y --auto-remove bison ruby \
-      && rm -r /usr/src/ruby \
       && echo 'gem: --no-document' > /etc/gemrc \ 
       && gem update --system \
-      && gem install bundler
+      && gem install bundler \
+      && rm -r /usr/src/ruby
