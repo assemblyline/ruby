@@ -5,7 +5,8 @@ describe 'Ruby' do
   let(:packages) { Packages.new(self) }
 
   it 'installs version 2.3.0-preview1', :'2.3.0-preview1' do
-    expect(ruby.semvar_version).to eq '2.3.0-preview1'
+    expect(ruby.semvar_version).to eq '2.3.0'
+    expect(ruby.full_version).to eq '2.3.0preview1'
   end
 
   it 'installs version 2.2.3', :'2.2.3' do
@@ -37,9 +38,10 @@ describe 'Ruby' do
 
     def to_upgrade
       context
-        .command('apt-get clean && apt-get update && apt-get upgrade --dry-run')
-        .stdout
-        .match(/^(\d+) upgraded, (\d+) newly installed, (\d+) to remove and (\d+) not upgraded\.$/)[1].to_i
+        .command('apt-check')
+        .stdout.chomp
+        .split(';').first
+        .to_i
     end
 
     private
