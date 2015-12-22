@@ -7,8 +7,16 @@ version = '2.3.0-preview1'
 checksum = 'dc8f9d48392a2bb226df5f4b4fd2074d81af155cdf3f3799139a6e31e012aefe'
 
 [[version]]
+version  = '2.2.4'
+checksum = 'b6eff568b48e0fda76e5a36333175df049b204e91217aa32a65153cc0cdcb761'
+
+[[version]]
 version  = '2.2.3'
 checksum = 'df795f2f99860745a416092a4004b016ccf77e8b82dec956b120f18bdc71edce'
+
+[[version]]
+version  = '2.1.8'
+checksum = 'afd832b8d5ecb2e3e1477ec6a9408fdf9898ee73e4c5df17a2b2cb36bd1c355d'
 
 [[version]]
 version  = '2.1.7'
