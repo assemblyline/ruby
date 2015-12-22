@@ -3,6 +3,10 @@ name = 'Ruby'
 repo = 'quay.io/assemblyline/ruby'
 
 [[version]]
+version = '2.3.0-preview2'
+checksum = 'cb1c745bda33ba9e812b48c87852571ef6486f985c5e6ff4508a137d1c9734a3'
+
+[[version]]
 version = '2.3.0-preview1'
 checksum = 'dc8f9d48392a2bb226df5f4b4fd2074d81af155cdf3f3799139a6e31e012aefe'
 
