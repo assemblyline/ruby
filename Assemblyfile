@@ -25,7 +25,7 @@ checksum = 'df795f2f99860745a416092a4004b016ccf77e8b82dec956b120f18bdc71edce'
 [[version]]
 # This version is just for testing, not production
 version  = '2.1.10'
-checksum = 'a74675578a9a801ac25eb7152bef3023432d6267f875b198eb9cd6944a5bf4f1'
+checksum = 'fb2e454d7a5e5a39eb54db0ec666f53eeb6edc593d1d2b970ae4d150b831dd20'
 
 [[version]]
 version  = '2.1.9'
