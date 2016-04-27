@@ -3,8 +3,16 @@ name = 'Ruby'
 repo = 'quay.io/assemblyline/ruby'
 
 [[version]]
+version = '2.3.1'
+checksum = 'b87c738cb2032bf4920fef8e3864dc5cf8eae9d89d8d523ce0236945c5797dcd'
+
+[[version]]
 version = '2.3.0'
 checksum = 'ba5ba60e5f1aa21b4ef8e9bf35b9ddb57286cb546aac4b5a28c71f459467e507'
+
+[[version]]
+version  = '2.2.5'
+checksum = '30c4b31697a4ca4ea0c8db8ad30cf45e6690a0f09687e5d483c933c03ca335e3'
 
 [[version]]
 version  = '2.2.4'
@@ -15,13 +23,18 @@ version  = '2.2.3'
 checksum = 'df795f2f99860745a416092a4004b016ccf77e8b82dec956b120f18bdc71edce'
 
 [[version]]
+# This version is just for testing, not production
+version  = '2.1.10'
+checksum = 'a74675578a9a801ac25eb7152bef3023432d6267f875b198eb9cd6944a5bf4f1'
+
+[[version]]
+version  = '2.1.9'
+checksum = '034cb9c50676d2c09b3b6cf5c8003585acea05008d9a29fa737c54d52c1eb70c'
+
+[[version]]
 version  = '2.1.8'
 checksum = 'afd832b8d5ecb2e3e1477ec6a9408fdf9898ee73e4c5df17a2b2cb36bd1c355d'
 
 [[version]]
 version  = '2.1.7'
 checksum = 'f59c1596ac39cc7e60126e7d3698c19f482f04060674fdfe0124e1752ba6dd81'
-
-[[version]]
-version = '2.0.0-p647'
-checksum = 'c88aaf5b4ec72e2cb7d290ff854f04d135939f6134f517002a9d65d5fc5e5bec'

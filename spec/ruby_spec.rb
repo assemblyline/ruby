@@ -4,20 +4,16 @@ describe 'Ruby' do
   let(:ruby)     { Ruby.new(self) }
   let(:packages) { Packages.new(self) }
 
-  it 'installs version 2.3.0', :'2.3.0' do
-    expect(ruby.semvar_version).to eq '2.3.0'
+  it 'installs version 2.3.1', :'2.3.1' do
+    expect(ruby.semvar_version).to eq '2.3.1'
   end
 
-  it 'installs version 2.2.3', :'2.2.3' do
-    expect(ruby.semvar_version).to eq '2.2.3'
+  it 'installs version 2.2.5', :'2.2.5' do
+    expect(ruby.semvar_version).to eq '2.2.5'
   end
 
-  it 'installs version 2.1.7', :'2.1.7' do
-    expect(ruby.semvar_version).to eq '2.1.7'
-  end
-
-  it 'installs version 2.0.0-p647', :'2.0.0-p647' do
-    expect(ruby.full_version).to eq '2.0.0p647'
+  it 'installs version 2.1.9', :'2.1.9' do
+    expect(ruby.semvar_version).to eq '2.1.9'
   end
 
   describe 'bundler' do
