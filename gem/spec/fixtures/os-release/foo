@@ -1,0 +1,5 @@
+NAME="Foo Linux"
+ID=foo
+ID_LIKE=bar
+VERSION_ID=0.0.1
+PRETTY_NAME="Foo Linux 0.0.1"

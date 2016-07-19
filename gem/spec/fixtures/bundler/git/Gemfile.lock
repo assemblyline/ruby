@@ -1,0 +1,18 @@
+GIT
+  remote: git@github.com:ruby/rake.git
+  revision: 46da6132ebdaf596501ca5356861820359ee8c88
+  specs:
+    rake (11.2.2)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  rake!
+
+BUNDLED WITH
+   1.12.5
