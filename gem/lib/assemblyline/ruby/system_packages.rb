@@ -1,4 +1,5 @@
 require "json"
+require "bundler"
 
 module Assemblyline
   module Ruby
