@@ -9,7 +9,7 @@ module Assemblyline
         end
 
         def install
-          add ".a10e.builddeps", system_packages.all
+          add ".a10e.builddeps", system_packages.all + ["su-exec"]
         end
 
         def remove
