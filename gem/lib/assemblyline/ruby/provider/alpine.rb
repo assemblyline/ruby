@@ -19,6 +19,8 @@ module Assemblyline
 
         private
 
+        attr_reader :system_packages
+
         def rundeps
           system_packages.runtime + required_packages
         end
