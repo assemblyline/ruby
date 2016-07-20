@@ -32,10 +32,14 @@ module Assemblyline
         end
 
         def add(virtual_package, packages)
+          puts "installing virtual package: #{virtual_package}"
+          puts "============="
+          package.each { |pkg| puts pkg }
           cmd "apk add --no-cache --virtual #{virtual_package} #{packages.join(" ")}"
         end
 
         def del(package)
+          puts "removing package: #{package}"
           cmd "apk del #{package}"
         end
 
