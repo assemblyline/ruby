@@ -1,17 +1,26 @@
+require "assemblyline/ruby/system_packages"
+
 module Assemblyline
   module Ruby
     module Provider
       class Alpine
-        def current_packages
-          `apk info -s`.split("\n")
+        def initialize(system_packages = SystemPackages.new)
+          @system_packages = system_packages
         end
 
-        def install(packages)
-          fail unless system "apk add --no-cache #{packages.join(" ")}"
+        def install
+          add ".a10e.builddeps", system_packages.all
         end
 
-        def remove(packages)
-          fail unless system "apk del #{packages.join(" ")}"
+        def remove
+          add ".a10e.rundeps", rundeps
+          del ".a10e.builddeps"
+        end
+
+        private
+
+        def rundeps
+          system_packages.runtime + required_packages
         end
 
         def required_packages
@@ -20,6 +29,18 @@ module Assemblyline
             .flatten
             .map { |file| `apk info --installed so:#{file}`.chomp }
             .uniq.sort
+        end
+
+        def add(virtual_package, packages)
+          cmd "apk add --no-cache --virtual #{virtual_package} #{packages.join(" ")}"
+        end
+
+        def del(package)
+          cmd "apk del #{package}"
+        end
+
+        def cmd(command)
+          fail unless system command
         end
       end
     end
