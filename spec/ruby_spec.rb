@@ -12,8 +12,8 @@ describe 'Ruby' do
     expect(ruby.semvar_version).to eq '2.2.5'
   end
 
-  it 'installs version 2.1.9', :'2.1.9' do
-    expect(ruby.semvar_version).to eq '2.1.9'
+  it 'installs version 2.1.10', :'2.1.10' do
+    expect(ruby.semvar_version).to eq '2.1.10'
   end
 
   describe 'bundler' do
